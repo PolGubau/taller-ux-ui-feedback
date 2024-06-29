@@ -63,6 +63,7 @@ textarea {
 
 .button {
   padding: 5px 10px;
+  border-radius: 7px;
   background-color: darkblue;
   color: #fff;
   text-align: center;

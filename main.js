@@ -17,6 +17,8 @@ for (const requiredField of requiredFields) {
   requiredField.addEventListener("keyup", () => {
     if (requiredField.value === "") {
       showError(requiredField);
+    } else {
+      hideError(requiredField);
     }
   });
 }

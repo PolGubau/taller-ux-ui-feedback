@@ -1,46 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="favicon.png" type="image/png" />
+    <title>Feedback</title>
+    <script src="./main.js" type="module"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="shortcut icon" href="favicon.png" type="image/png">
-  <title>Feedback</title>
-  <script src="./main.js" type="module"></script>
-</head>
-
-<body>
-  <div class="container">
-    <h2 class="title">Feedback</h2>
-    <div class="form">
-      <div class="form__group">
-        <label class="form__label" id="name">¿Cómo te llamas? *</label>
-        <input class="form__control" type="text" id="name" placeholder="Introduce tu nombre" tabindex="1" required>
-        <span class="form__error">No se olvide de rellenar el input</span>
-      </div>
-      <div class="form__group">
-        <label class="form__label" id="name">¿Cuál es tu email? *</label>
-        <input class="form__control" type="text" id="email" placeholder="Introduce tu correo electrónico" tabindex="2">
-        <span class="form__error">No se olvide de rellenar el input</span>
-      </div>
-      <div class="form__group">
-        <label class="form__label" id="age">¿Cuántos años tienes?</label>
-        <input class="form__control" type="text" id="age" placeholder="Introduce tu edad" tabindex="4">
-      </div>
-      <div class="form__group">
-        <label class="form__label" id="birthdate">¿Qué día naciste?</label>
-        <input class="form__control" type="text" placeholder="Introduce tu fecha de nacimiento" tabindex="3">
-      </div>
-      <div class="form__group">
-        <label class="form__label" id="feedback">¿Qué te ha parecido el taller? *</label>
-        <textarea class="form__control" placeholder="Introduce tu feedback" tabindex="2" required></textarea>
-        <span class="form__error">No se olvide de rellenar el input</span>
-      </div>
-      <button class="button">Submit</button>
-      <button class="button">Ir a login</button>
-    </div>
-  </div>
-</body>
-
+  <body>
+    <section class="container">
+      <h1 class="title">Feedback</h1>
+      <form class="form" >
+        <div class="form__group">
+          <label class="form__label" for="name" id="name-label"
+            >¿Cómo te llamas?</label
+          >
+          <input
+            class="form__control"
+            type="text"
+            id="name"
+            placeholder="Pol Gubau"
+            required
+            aria-errormessage="Recuerda escribir tu nombre"
+            aria-required="true"
+          />
+          <span class="form__error">Recuerda escribir tu nombre</span>
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="email" id="name"
+            >¿Cuál es tu email?</label
+          >
+          <input
+            class="form__control"
+            type="email"
+            aria-required="true"
+            aria-errormessage="Recuerda escribir tu email"
+            id="email"
+            placeholder="gubaupol@gmail.com"
+          />
+          <span class="form__error">Recuerda escribir tu email</span>
+        </div>
+        <div class="form__group">
+          <label class="form__label" id="age-label" for="age"
+            >¿Cuántos años tienes?</label
+          >
+          <input
+            class="form__control"
+            type="number"
+            id="age"
+            aria-required="true"
+            placeholder="22"
+          />
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="gebunstag" id="birthdate"
+            >¿Qué día naciste?
+            <span>(Optional)</span>
+          </label>
+          <input
+            id="gebunstag"
+            class="form__control"
+            type="date"
+            placeholder="Introduce tu fecha de nacimiento"
+          />
+        </div>
+        <div class="form__group">
+          <label class="form__label" id="feedback-label" for="feedback"
+            >¿Qué te ha parecido el taller?
+          </label>
+          <textarea
+            class="form__control"
+            placeholder="No me ha gustado nad..."
+            required
+            
+            aria-errormessage="Recuerda escribir tu feedback"
+            id="feedback"
+            aria-required="true"
+          ></textarea>
+          <span class="form__error">Recuerda escribir tu feedback</span>
+        </div>
+        <button type="submit" class="button">Enviar Feedback</button>
+        <a class="button">Ir a login</a>
+      </form>
+    </secti>
+  </body>
 </html>
